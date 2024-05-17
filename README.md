@@ -20,3 +20,5 @@ Image Generation: Post-training, the model generates images from random noise in
 FID Score Calculation: The Fréchet Inception Distance (FID) score is computed to assess the quality of the generated images in comparison to real CIFAR-10 images.
 
 In summary, the code systematically sets up the environment, trains a diffusion model on CIFAR-10 data, generates new images, and evaluates their quality through quantitative metrics. This structured approach ensures a comprehensive workflow from data preparation to model evaluation.
+
+The result:  ![image](https://github.com/fmirzadeh99/Diffusion-model/assets/169579231/bc95ff0b-7d48-465f-bca6-a7f73d222e65)
