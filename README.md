@@ -1,14 +1,54 @@
 # Diffusion-model
-The provided code sets up a diffusion model on CIFAR-10 data and trains it, where image quality is the most important consideration. The well-structured and academic overview of what this code does shall be provided below: Utility Functions: A few utility functions have been defined, such as those for converting images into tensors, reverting that conversion back to images, and reshaping tensors for purposes connected with feature mapping. Training Parameters and Device Configuration: Training parameters such as the number of steps, batch size, learning rate, and device (GPU or CPU) are configured.
 
-Data Loaders: Data loaders for the CIFAR-10 dataset are established to streamline the training and testing processes.
-Diffusion Functions: Functions are defined to model the diffusion process by introducing noise to images at various steps.
+## Introduction
+This project sets up and trains a diffusion model on the CIFAR-10 dataset with a focus on high-quality image generation. Structurization of this project workflow can be done in three different components: data preparation, model training itself, and result evaluation.
 
-Image Visualization: The code periodically saves and visualizes images at different stages of the diffusion process to monitor progress.
-U-Net Model Definition: A U-Net model, specialized for image generation, is defined. This neural network architecture is pivotal for the task.
-Train the U-Net model with the given parameters. In this section of the training loop: track the losses and save the best model as per validation metrics.
-Image Generation: This is a model under which images are generated against random noise inputs after training. The generated images are saved for further evaluation.
+![image](https://github.com/user-attachments/assets/39e24388-ef59-4597-a5cd-14b301c06093)
+|:-:|
+|Overview of Diffusion Models
 
-It calculates the FID score, which is a measure of the quality of generated images, compared to real CIFAR-10 images. Precisely, this code programmatically configures the environment, trains a diffusion model in CIFAR-10 data, generates new images, and measures their qualitative values. On top of that, such a well-structured way to ensure a comprehensive workflow from data preparation to model evaluation is followed.
+## Data Preparation
+Utility Functions
+Several utility functions are defined for data handling and transformation:
+Converting images to tensors and vice versa.
+This is tensor reshaping for feature mapping purposes.
+Data Loaders
+It establishes data loaders for the CIFAR-10 dataset to enable smooth training and testing by efficiently handing over data in batches.
 
-The result:  ![image](https://github.com/fmirzadeh99/Diffusion-model/assets/169579231/bc95ff0b-7d48-465f-bca6-a7f73d222e65)
+## Hyperparameters and Training
+Parameters of Training and Configuration of Devices
+Key training parameters are configured, including:
+Number of steps
+Batch size
+Learning Rate
+Device Selection (GPU or CPU)
+Diffusion Functions
+These functions are designed for the process of diffusion by adding noise to the images at different steps during this process. This step is an essential part of training a diffusion model.
+
+![image](https://github.com/user-attachments/assets/470a4c48-5c0d-45f6-8b7b-a79fcac0eb77)
+|:-:|
+|Adding Noise
+
+## U-Net Model Definition
+A class, image generation, specialized with a U-Net model has been defined. This neural network architecture is paramount in the generation of high-quality images.
+
+![image](https://github.com/user-attachments/assets/f557aead-9eea-49c9-80ee-685bd9e4bd50)
+|:-:|
+|Unet diagram
+
+## Training Loop
+The U-Net model will now be trained for the specified parameters. During training:
+The losses are accounted for to keep track of the progress. It saves the best model based on validation metrics.
+
+![image](https://github.com/user-attachments/assets/c184e9fa-6109-4fcd-b9b2-1ae34a3f7674)
+|:-:|
+|Training Loss Curve
+
+## Image Visualization
+The code periodically saves and visualizes images during training at different stages of this diffusion process to monitor progress and check the quality of images.
+
+## Evaluation Metrics and Results Image Generation
+It will generate images after training, based on random noise as an input. All the generated images will be saved for further evaluation. Quality Assessment It runs the Fréchet Inception Distance score, which evaluates the quality of generated images compared to real CIFAR-10. The FID score quantifies how similar generated images are to their original dataset. Conclusion It sets up the environment, trains a diffusion model on CIFAR-10 to generate new images, and finally evaluates their quality. It means such a well-structured workflow from data preparation to model evaluation shall not miss a single step, focusing only on high-quality image generation.
+
+
+
